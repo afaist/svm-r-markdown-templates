@@ -5,8 +5,10 @@ output:
     keep_tex: true
     fig_caption: true
     latex_engine: pdflatex
-    template: ~/Dropbox/miscelanea/svm-r-markdown-templates/svm.latex.ms.tex
-title: "A Pandoc Markdown Article Starter and Template"
+    template: svm-latex-ms.tex
+header-includes:
+   - \usepackage[russian]{babel}
+title: "A Pandoc Markdown Article Starter and Template (Здесь можно писать по-русски!)"
 thanks: "Replication files are available on the author's Github account (http://github.com/svmiller). **Current version**: `r format(Sys.time(), '%B %d, %Y')`; **Corresponding author**: svmille@clemson.edu."
 author:
 - name: Steven V. Miller
@@ -18,7 +20,7 @@ geometry: margin=1in
 fontfamily: mathpazo
 fontsize: 11pt
 # spacing: double
-bibliography: ~/Dropbox/master.bib
+#bibliography: master.bib
 biblio-style: apsr
 ---
 
@@ -44,7 +46,7 @@ output:
     keep_tex: true
     fig_caption: true
     latex_engine: pdflatex
-    template: ~/Dropbox/miscelanea/svm-r-markdown-templates/svm.latex.ms.tex
+    template: svm-latex-ms.tex
 title: "A Pandoc Markdown Article Starter and Template"
 thanks: "Replication files are available on the author's Github account..."
 author:
@@ -61,7 +63,7 @@ geometry: margin=1in
 fontfamily: mathpazo
 fontsize: 11pt
 # spacing: double
-bibliography: ~/Dropbox/master.bib
+bibliography: master.bib
 biblio-style: apsr
 ---
 ```

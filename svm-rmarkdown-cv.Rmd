@@ -2,11 +2,13 @@
 output: 
   pdf_document:
     latex_engine: pdflatex
-    template: ~/Dropbox/miscelanea/svm-r-markdown-templates/svm-latex-cv.tex
+    template: svm-latex-cv.tex
+header-includes:
+   - \usepackage[russian]{babel}
 geometry: margin=1in
 
 title: "CV"
-author: William Sealy Gosset
+author: Уильям Сёрли Гёссет
 
 jobtitle: "Chief Brewer, Arthur Guinness & Son"
 address: "Guinness Brewery В· Park Royal В· London NW10 7RR, UK"

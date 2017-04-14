@@ -4,7 +4,7 @@ output:
     keep_tex: true
     fig_caption: yes
     latex_engine: pdflatex
-    template: ~/Dropbox/miscelanea/svm-r-markdown-templates/svm-latex-syllabus.tex
+    template: svm-latex-syllabus.tex
 geometry: margin=1in
 
 title: "POSC 0000: A Class with an R Markdown Syllabus"
@@ -22,6 +22,7 @@ fontfamily: mathpazo
 fontsize: 11pt
 header-includes:
    - \linespread{1.05}
+   - \usepackage[russian]{babel}
 ---
 
 
