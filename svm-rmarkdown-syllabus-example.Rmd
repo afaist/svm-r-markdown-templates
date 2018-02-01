@@ -7,29 +7,28 @@ output:
     template: svm-latex-syllabus.tex
 geometry: margin=1in
 
-title: "POSC 0000: A Class with an R Markdown Syllabus"
-author: Steven V. Miller
-date: "Fall 2016"
 
-email: "svmille@clemson.edu"
+title: "Введение в написание учебных планов на R Markdown"
+author: Steven V. Miller и Алексей Кнорре
+date: "Зима 2018"
+
+email: "svmiller@clemson.edu"
 web: "svmiller.com/teaching"
 officehours: "W 09:00-11:30 a.m."
 office: "230A Brackett Hall"
 classroom: "*online*"
 classhours: "TR 02:00-03:45 p.m."
 
-fontfamily: mathpazo
-fontsize: 11pt
 header-includes:
    - \linespread{1.05}
-   - \usepackage[russian]{babel}
+   
 ---
 
 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(cache=FALSE, dev='pdf')
-mon <- as.Date("2016-08-15")
+mon <- as.Date("2018-02-01")
 # fri <- as.Date("2016-01-08")
 
 advdate <- function(obj, adv) {
@@ -45,8 +44,8 @@ advdate <- function(obj, adv) {
 library(RefManageR)
 # library(knitcitations)
 # library(rcrossref)
-bib <- ReadBib("~/Dropbox/master.bib")
-myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
+bib <- ReadBib("master.bib")
+myopts <- BibOptions(bib.style = "authortitle", style="latex", first.inits=FALSE, max.names = 20)
 
 ```
 
@@ -65,7 +64,7 @@ You'll learn stuff in this class, I hope. Lorem ipsum dolor sit amet, consectetu
 # Required Readings
 
 ```{r, echo = FALSE, results="asis"} 
-bib["vasquez2009twp", "wagner2007ws"]
+bib[15:20]
 ``` 
 
 
@@ -89,14 +88,22 @@ I will detail the policy for this course below. Basically, don't cheat and try t
 
 ```{r, include=FALSE}
 options(scipen=999)
-Attend <- read.csv("~/Dropbox/teaching/attendance-grades-relationship.csv")
-Attend$rgrade <- round(Attend$grade, 0)
-Attend$perattend <- (Attend$attendance/Attend$max)*100
-Attend <- subset(Attend, !is.na(rgrade))
-Attend$name <- as.numeric(Attend$name)
-Attend$id <- as.numeric(Attend$id)
-Attend$term <- as.numeric(Attend$term)
-Attend$class <- as.numeric(as.factor(Attend$class))
+
+Attend <- data.frame(rgrade = round(runif(n = 100, 0, 100),0),
+                     perattend = round(runif(n = 100, 0, 100),0),
+                     name = round(runif(n = 100, 0, 100),0),
+                     id = round(runif(n = 100, 0, 100),0),
+                     term = round(runif(n = 100, 0, 100),0),
+                     class = round(runif(n = 100, 0, 10),0))
+
+#Attend <- read.csv("~/Dropbox/teaching/attendance-grades-relationship.csv")
+#Attend$rgrade <- round(Attend$grade, 0)
+#Attend$perattend <- (Attend$attendance/Attend$max)*100
+#Attend <- subset(Attend, !is.na(rgrade))
+#Attend$name <- as.numeric(Attend$name)
+#Attend$id <- as.numeric(Attend$id)
+#Attend$term <- as.numeric(Attend$term)
+#Attend$class <- as.numeric(as.factor(Attend$class))
 M1 <- lm(rgrade ~ perattend, Attend)
 M2 <- lm(rgrade ~ perattend, data=subset(Attend, perattend >= 75))
 library(broom)
@@ -115,8 +122,9 @@ A simple linear regression of a student's final grade on percentage of classes a
 
 ```{r attendplot, echo = FALSE, results="asis", cache=FALSE, fig.cap="A Scatterplot of the Relationship between Class Attendance and Final Grade", fig.height=4, fig.pos="H"}
 Graph <- ggplot(Attend, aes(x = perattend, y = rgrade))
-Graph + geom_point() + labs(x="Percent Attendance in Class", y="Final Grade in Class (0-100)") + 
-                              geom_smooth(method=lm)
+Graph + geom_point() +
+  labs(x="Percent Attendance in Class", y="Final Grade in Class (0-100)") +
+  geom_smooth(method=lm)
 ```
 
 A student might object that attendance is partly endogenous to a grade since past classes deducted all participation points after five unexcused absences. This is true, but the findings hold even when I subset the data to cases where attendance is greater than 75% (i.e. roughly the threshold below which I deduct all participation points). Students who just meet the threshold for full participation points nevertheless get an estimated decrease of `r round(M2$coefficients[2], 3)*5` in their overall grade for each missed class. This effect is also precise (*t* = `r round(M2df$statistic[2], 3)`). Put another way, we would have observed this effect in my data if there were no *true* effect of attendance on grades about `r round(summary(M2)$coefficients[2,4]*100000)` times in 100,000 "trials" (i.e. *p* = `r round(summary(M2)$coefficients[2,4], 5)`), on average. That probability is effectively zero. *Attend class*.
@@ -174,29 +182,29 @@ Read *all* associated documents on course website.
 ## `r advdate(mon, 2)`: The First Topic Where We Read John Vasquez
 
 ```{r, echo = FALSE, results="asis"} 
-bib[author = "vasquez"]
+bib[17]
 ``` 
 
 ##  `r advdate(mon, 3)`: Read the Nos. 90-97 Items in My Bib
 
 ```{r, echo = FALSE, results="asis"} 
-bib[90:97]
+bib[10:15]
 ``` 
 
 *Your "Slow Ride" appreciation paper is due in Thursday's class*.
 
-##  `r advdate(mon, 4)`: Read Bib Item No. 120
+##  `r advdate(mon, 4)`: Read Bib Item No. 16
 
 ```{r, echo = FALSE, results="asis"} 
-bib[120]
+bib[16]
 ``` 
 
 
 
-##  `r advdate(mon, 5)`: The Fourth Topic with Bib Item No. 510
+##  `r advdate(mon, 5)`: The Fourth Topic with Bib Item No. 20
 
 ```{r, echo = FALSE, results="asis"} 
-bib[510]
+bib[20]
 ``` 
 
 ##  `r advdate(mon, 6)`: Keep

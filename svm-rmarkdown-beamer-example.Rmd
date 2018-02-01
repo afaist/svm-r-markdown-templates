@@ -1,6 +1,6 @@
 ---
-title: An Example R Markdown Document
-subtitle: (��� ������������!)
+title: Пример документа в R Markdown
+subtitle: (Теперь по-русски)
 author: Steven V. Miller
 institute: Department of Political Science
 # titlegraphic: /Dropbox/teaching/clemson-academic.png

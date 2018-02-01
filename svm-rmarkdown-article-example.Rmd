@@ -8,12 +8,14 @@ output:
     template: svm-latex-ms.tex
 header-includes:
    - \usepackage[russian]{babel}
-title: "A Pandoc Markdown Article Starter and Template (����� ����� ������ ��-������!)"
-thanks: "Replication files are available on the author's Github account (http://github.com/svmiller). **Current version**: `r format(Sys.time(), '%B %d, %Y')`; **Corresponding author**: svmille@clemson.edu."
+title: "Шаблон и руководство по началу работы с вёрсткой статей в Markdown и Pandoc"
+thanks: "Оригинальный шаблон и файлы для репликации находятся здесь  (http://github.com/svmiller). **Текущая версия**: `r format(Sys.time(), '%B %d, %Y')`; **Связь с автором оригинала**: svmille@clemson.edu; **связь с автором перевода**: aknorre@eu.spb.ru."
 author:
 - name: Steven V. Miller
   affiliation: Clemson University
-abstract: "This document provides an introduction to R Markdown, argues for its benefits, and presents a sample manuscript template intended for an academic audience. I include basic syntax to R Markdown and a minimal working example of how the analysis itself can be conducted within R with the `knitr` package."
+- name: Алексей Кнорре
+  affiliation: Европейский Университет в Санкт-Петербурге
+abstract: "Этот текст является введением в R Markdown, рассказывает про его преимущества, и показывает, как студентам, учёным и преподавателям делать статьи в R Markdown. Автором является Стивен Миллер, который написал этот текст по-английски с примерами базового синтаксиса R Markdown и дал минимальный рабочий шаблон того, как можно проводить анализ данных в R с помощью пакета `knitr`. Алексей Кнорре изменил шаблон (теперь он собирается в PDF даже с русским языком) и немного перевёл начало."
 keywords: "pandoc, r markdown, knitr"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 geometry: margin=1in
@@ -24,7 +26,7 @@ fontsize: 11pt
 biblio-style: apsr
 ---
 
-# Introduction
+# Введение
 
 Academic workflow, certainly in political science, is at a crossroads. The *American Journal of Political Science* (*AJPS*) announced a (my words) ["show your work" initiative](http://ajps.org/2015/03/26/the-ajps-replication-policy-innovations-and-revisions/) in which authors who are tentatively accepted for publication at the journal must hand over the raw code and data that produced the results shown in the manuscript. The editorial team at *AJPS* then reproduces the code from the manuscript. Pending successful replication, the manuscript moves toward publication. The *AJPS* might be at the fore of this movement, and it could be the most aggressive among political science journals, but other journals in our field have signed the joint [Data Access & Research Transparency](http://www.dartstatement.org/) (DART) initiative. This, at a bare minimum, requires uploading code from quantitatively-oriented published articles to in-house directories hosted by the journal or to services like [Dataverse](http://dataverse.org/). 
 

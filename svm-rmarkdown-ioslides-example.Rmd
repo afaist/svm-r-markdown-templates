@@ -1,28 +1,26 @@
 ---
-title: An Example R Markdown Document
-subtitle: (A Subtitle Would Go Here if This Were a Class)
-author: Steven V. Miller
-institute: Department of Political Science
-titlegraphic: /Dropbox/teaching/clemson-academic.png
+title: Пример презентации в R Markdown
+subtitle: (здесь может быть подзаголовок)
+author: Стивен Миллер
+institute: Департамент политической науки
+#titlegraphic: /Dropbox/teaching/clemson-academic.png
 fontsize: 10pt
 output:
  ioslides_presentation:
     smaller: true
-    logo: ~/Dropbox/teaching/clemson-paw-transparent.png
-    css: ~/Dropbox/miscelanea/svm-r-markdown-templates/svm-ioslides-css.css    
+    #logo: ~/Dropbox/teaching/clemson-paw-transparent.png
+    css: svm-ioslides-css.css    
  beamer_presentation:
-    template: ~/Dropbox/miscelanea/svm-r-markdown-templates/svm-latex-beamer.tex
+    template: svm-latex-beamer.tex
     keep_tex: true
 # toc: true
     slide_level: 2
 ---
 
 
+# Поп-песни и политическая наука
 
-
-# Pop Songs and Political Science
-
-## Sheena Easton and Game Theory
+## Шина Истон и теория игр
 
 Sheena Easton describes the following scenario for her baby:
 
@@ -36,7 +34,7 @@ Sheena Easton and her baby are playing a **zero-sum (total conflict) game**.
 - Akin to Holmes-Moriarty game (see: von Neumann and Morgenstern)
 - Solution: **mixed strategy**
 
-## Rick Astley's Re-election Platform
+## Политическая платформа Рика Асли
 
 Rick Astley's campaign promises:
 
@@ -49,7 +47,7 @@ Rick Astley's campaign promises:
 
 Whereas these pledges conform to the preferences of the **median voter**, we expect Congressman Astley to secure re-election.
 
-## Caribbean Queen and Operation Urgent Fury
+## Карибская королева и операция *Чрезвычайная ярость*
 
 Billy Ocean released "Caribbean Queen" in 1984.
 
@@ -65,7 +63,7 @@ Billy Ocean is advocating for what became the Goldwater-Nichols Act.
 
 - Wanted to take advantage of **economies of scale**, resolve **coordination problems** in U.S. military.
 
-## The Good Day Hypothesis
+## Гипотеза хорошего дня
 
 We know the following about Ice Cube's day.
 
@@ -81,14 +79,14 @@ This leads to two different hypotheses:
 
 These hypotheses are tested using archival data of Ice Cube's life.
 
-# Example R code
+# Примеры кода в R
 ## Example R stuff
 
 ```{r cars, echo = TRUE}
 summary(cars)
 ```
 
-## Slide with Plot
+## Слайд с графиком
 
 ```{r pressure}
 plot(pressure)
@@ -104,7 +102,7 @@ base + stat_function(fun = dnorm, colour = "red")
 ```
 
 
-## Another Plot
+## Другой график
 
 ```{r plotit, echo=FALSE}
 library(ggplot2)

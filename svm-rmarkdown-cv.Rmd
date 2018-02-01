@@ -8,10 +8,10 @@ header-includes:
 geometry: margin=1in
 
 title: "CV"
-author: ������ Ѹ��� ø����
+author: "Уильям Сили Гёссет"
 
-jobtitle: "Chief Brewer, Arthur Guinness & Son"
-address: "Guinness Brewery · Park Royal · London NW10 7RR, UK"
+jobtitle: 'Главный пивовар, ООО "Артур Гиннесс и Сын"'
+address: "Пивоварня Гиннесса, Парк Рояль, Лондон NW10 7RR, UK"
 fontawesome: yes
 email: guinness@consumer-care.net
 # github: svmiller
@@ -28,26 +28,26 @@ linkcolor: blue
 urlcolor: blue
 ---
 
-# Employment
+# Работа
 
-*Arthur Guinness & Son*
+*ООО "Артур Гиннесс и Сын"*
 
-Chief Brewer (Park Royal) \hfill 1935-1937
+Главный пивовар (Парк Рояль) \hfill 1935-1937
 
-Researcher (Dublin) \hfill 1899-1935
+Исследователь (Дублин) \hfill 1899-1935
 
-# Education
+# Образование
 
-*New College, Oxford University*, B.A. Chemistry \hfill 1899
+*Новый Колледж, Университет Оксфорда*, Бакалавр химии \hfill 1899
 
 
-# Publications
+# Публикации
 
-## Books
+## Книги
 
 Pearson, E.S. and John Wishart (eds.). 1943. *"Student's" Collected Papers* London: Biometrika Office.
 
-## Journal Articles
+## Статьи в журналах
 
 Student. 1938. "Comparison between Balanced and Random Arrangements on Field Plots." *Biometrika* 29(3-4): 363--378.
 
@@ -79,12 +79,12 @@ Student. 1908. "The Probable Error of a Mean." *Biometrika* 6(1): 1--25.
 
 Student. 1907. "On the Error of Counting with a Haemacytometer." *Biometrika* 5(3): 351--360.
 
-## Other Publications
+## Другие публикации
 
 Student. 1905. "The Pearson Co-efficient of Correlation." Supplement to Report of 1904, Arthur Guinness Son & Company.
 
 Student. 1904. "The Application of the 'Law of Error' to the Work of the Brewery." Report, Arthur Guinness Son & Company.
 
-# References
+# Рекомендации
 
-Available upon request, though likely would include Karl Pearson and Ronald A. Fisher. Please send corrections, feedback, or details of missed publications (of which there are probably a few) to svmille@clemson.edu.
+Рекомендации доступны по запросы, хотя наверняка связаны с Карлом Пирсоном и Рональдом Фишером. Пожалуйста, присылайте заметки и отзывы о пропущенных публикациях Стивену Миллеру (по-английски) на svmille@clemson.edu.
